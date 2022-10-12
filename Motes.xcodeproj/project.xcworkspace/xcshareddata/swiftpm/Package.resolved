@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "sttextview",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:krzyzanowskim/STTextView.git",
+      "state" : {
+        "revision" : "9164f84b14b6315d9aaad0fb100b35f0c236db5a",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "swiftui-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:jaywcjlove/swiftui-markdown.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "35bb5e7b9a6e017c4a7612f815fb43120aa236ef"
+      }
+    }
+  ],
+  "version" : 2
+}

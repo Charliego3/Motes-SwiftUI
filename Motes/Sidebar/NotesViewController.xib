@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NotesViewController" customModule="MarkdownNotes" customModuleProvider="target">
+            <connections>
+                <outlet property="outlineView" destination="Td4-6h-Rwi" id="Xti-th-tXm"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="515"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="27" horizontalPageScroll="10" verticalLineScroll="27" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXd-Ne-6sE">
+                    <rect key="frame" x="0.0" y="0.0" width="303" height="515"/>
+                    <clipView key="contentView" drawsBackground="NO" id="cX0-h1-bcd">
+                        <rect key="frame" x="0.0" y="0.0" width="303" height="515"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="sourceList" selectionHighlightStyle="sourceList" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="27" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="13" outlineTableColumn="qZ9-iP-jK7" id="Td4-6h-Rwi" customClass="NotesOutlineView" customModule="MarkdownNotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="303" height="505"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <size key="intercellSpacing" width="3" height="0.0"/>
+                                <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <tableColumns>
+                                    <tableColumn identifier="NotesDataCellIdentifier" width="271" minWidth="40" maxWidth="1000" id="qZ9-iP-jK7">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="PcI-JD-MYR">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <prototypeCellViews>
+                                            <tableCellView id="DSb-T6-EDL">
+                                                <rect key="frame" x="11" y="0.0" width="280" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K1G-Pc-eSz">
+                                                        <rect key="frame" x="0.0" y="6" width="15" height="15"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="LQg-pB-fFo"/>
+                                                        <color key="contentTintColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                    </imageView>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXc-dN-AgR">
+                                                        <rect key="frame" x="16" y="6" width="266" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="hml-8A-Ru8">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="YXc-dN-AgR" secondAttribute="trailing" id="Bfd-QH-GJh"/>
+                                                    <constraint firstItem="K1G-Pc-eSz" firstAttribute="leading" secondItem="DSb-T6-EDL" secondAttribute="leading" id="Zuy-Ya-8h0"/>
+                                                    <constraint firstItem="YXc-dN-AgR" firstAttribute="leading" secondItem="K1G-Pc-eSz" secondAttribute="trailing" constant="3" id="fFG-d9-aWt"/>
+                                                    <constraint firstItem="K1G-Pc-eSz" firstAttribute="centerY" secondItem="DSb-T6-EDL" secondAttribute="centerY" id="gvl-WT-Td5"/>
+                                                    <constraint firstItem="YXc-dN-AgR" firstAttribute="centerY" secondItem="DSb-T6-EDL" secondAttribute="centerY" id="mRw-Dx-Xnm"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="imageView" destination="K1G-Pc-eSz" id="5e5-0B-iwp"/>
+                                                    <outlet property="textField" destination="YXc-dN-AgR" id="Ude-RL-CfA"/>
+                                                </connections>
+                                            </tableCellView>
+                                        </prototypeCellViews>
+                                    </tableColumn>
+                                </tableColumns>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="yO0-XL-Bof"/>
+                                    <outlet property="delegate" destination="-2" id="iDn-Qp-PPv"/>
+                                </connections>
+                            </outlineView>
+                        </subviews>
+                        <nil key="backgroundColor"/>
+                        <edgeInsets key="contentInsets" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="BK1-WX-Ypf">
+                        <rect key="frame" x="-100" y="-100" width="303" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Zg2-7p-hDt">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="UXd-Ne-6sE" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="7Ra-X2-XMx"/>
+                <constraint firstAttribute="trailing" secondItem="UXd-Ne-6sE" secondAttribute="trailing" id="Dcg-th-Pe3"/>
+                <constraint firstAttribute="bottom" secondItem="UXd-Ne-6sE" secondAttribute="bottom" id="krs-Ck-yOz"/>
+                <constraint firstItem="UXd-Ne-6sE" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="mfb-5K-TKT"/>
+            </constraints>
+            <point key="canvasLocation" x="50.5" y="275.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSActionTemplate" width="15" height="15"/>
+    </resources>
+</document>

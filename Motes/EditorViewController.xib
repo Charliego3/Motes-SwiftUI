@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EditorViewController" customModule="MarkdownNotes" customModuleProvider="target">
+            <connections>
+                <outlet property="textView" destination="Rza-sT-xPK" id="4vp-Pr-rDN"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView appearanceType="aqua" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" translatesAutoresizingMaskIntoConstraints="NO" id="3og-pU-uEg">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <clipView key="contentView" drawsBackground="NO" id="zGB-mR-1tY">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView horizontallyResizable="YES" verticallyResizable="YES" fieldEditor="YES" usesFontPanel="YES" findStyle="bar" incrementalSearchingEnabled="YES" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" usesRuler="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Rza-sT-xPK" customClass="EditorTextView" customModule="MarkdownNotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="262"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <size key="minSize" width="400" height="262"/>
+                                <size key="maxSize" width="480" height="10000000"/>
+                                <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="delegate" destination="-3" id="Enf-HD-vtu"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <edgeInsets key="contentInsets" left="0.0" right="0.0" top="5" bottom="5"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="wNK-ok-Cwm">
+                        <rect key="frame" x="0.0" y="256" width="480" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Lzn-z3-afQ">
+                        <rect key="frame" x="464" y="0.0" width="16" height="272"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3og-pU-uEg" secondAttribute="trailing" id="5pb-nV-OyB"/>
+                <constraint firstAttribute="bottom" secondItem="3og-pU-uEg" secondAttribute="bottom" id="Dyn-ag-n2e"/>
+                <constraint firstItem="3og-pU-uEg" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="epb-5L-Tcs"/>
+                <constraint firstItem="3og-pU-uEg" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="p7K-97-CEf"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+    </objects>
+</document>
